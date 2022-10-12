@@ -1,0 +1,60 @@
+<!DOCTYPE html> 
+
+<head>
+    <title>Crud Operation</title>
+    <link type="text/css" rel="stylesheet" href="style.css" </head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <form autocomplete="off" onsubmit="onFormSubmit()">
+                    <div>
+                        <label for="productId">Product Id</label>
+                        <input type="number" name="productId" id="productId">
+                    </div>
+                    <div>
+                        <label for="productName">Product Name</label>
+                        <input type="text" name="productName" id="productName">
+                    </div>
+                    <div>
+                        <label for="categoryName">Category Name</label>
+                        <input type="text" name="categoryName" id="categoryName">
+                    </div>
+                    <div>
+                        <label for="categoryId">Category Id</label>
+                        <input type="number" name="categoryId" id="categoryId">
+                    </div>
+
+                    <div class="form_action--button">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
+
+            <td>
+                <table class="list" id="storeList">
+                    <thead>
+                        <tr>
+                            <th>product Id</th>
+                            <th>product Name</th>
+                            <th>category Name</th>
+                            <th>category Id</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+            </td>
+        </tr>
+    </table>
+    <div class="" [selectColumn]="false" [expandableRows]="false" [limit]="limit" [indexColumn]="false"
+        (prevPage)="prevPage($event)" (nextPage)="nextPage($event)" (jumpToPage)="jumpToPage($event)"
+        [offsetValue]="offset">
+        </div>
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+
+</html>
